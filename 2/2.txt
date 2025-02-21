@@ -1,0 +1,47 @@
+What’s Pairs Trading?
+
+Pairs Trading is a market-neutral strategy that exploits temporary price variations between two correlated securities. It is widely used by traders and investors to generate profits in uptrend, downtrend, and sideways markets.
+
+History of Pairs Trading
+
+The pairs trading strategy was first used by  Gerry Bamberger and later led by Nunzio Tartaglia's quantitative group at Morgan Stanley in the 1980s. A very famous pairs trading strategy user was a hedge fund Long Term capital management.
+
+Workings
+
+1. Identification of assets: Traders or researchers use statistical methods to identify two assets that show a strong historical statistical connection. These could be any two stocks from the same industry like the food and beverage industry(PepsiCo and Coca-Cola), financial banks(Morgan Stanley or Goldman Sachs), or different securities such as ETFs, commodities or currencies, etc.
+2. Monitoring the spread: Spread is the difference between the prices of the assets. If this spread gap widens much, it signifies a trading opportunity.
+3. Executing the trade: Suppose, one security moves up while the other security moves down, which means the spread is widening, the trader will go long on the undervalued stock and short on the overvalued asset. It shows that after some time, the spread difference will narrow down.
+4. Closing the position: Once the spread reverts back to its previous position, the trader will exit its position expecting profits from the price convergence.
+
+Identification of Pairs Asset
+
+Traders/ Researchers use statistical and machine learning techniques to find suitable pairs of securities.
+
+1. Correlation: Correlation measures the strength and direction of a relationship between two assets. It varies from -1 to 1.
+    a. +1 shows that a highly positive correlation exists between the assets(both move in similar directions either an upward or downward direction).  
+    b. -1 shows there is a highly negative correlation(one moves upward while another is downward, and vice versa).
+    c. 0 means no correlation.
+    Correlation = covariance(x,y) / standard_Deviation(x) *  standard_Deviation(y)
+
+2. Cointegration: Cointegration measures long-term stable relationships or long-term correlations between the assets. It checks whether the linear combination of those assets is stationary or not. It can be tested using Augmented DIcky FUller(adf) test or the Engle Granger test. It can be present in these conditions:
+    a. When these assets have long-term relationships
+    b. Move together and result in a stationary time series.
+
+3. Z-Score: It is very useful for making threshold levels. Given a normal distribution of a dataset, z-score creates a new distribution with a mean of 0 and a standard deviation of 1. For pairs trading strategy, we convert those spread into z-scores which help in making threshold levels like 1.5 sigma, 2 sigma, etc.
+	z = (x- mean) / std dev
+
+Examples
+
+Consider two beverage stocks PepsiCo and Coca-Cola. In the past time, their prices may have moved together due to some market reasons. If any one of these asset’s price goes up, while the other one goes down, it creates an opportunity for the trader.
+1. Go long on one asset's undervalued stock.
+2. Go short on another asset overvalued stock.
+3. Exit the trades when the spread decreases or reverts to the mean, gaining some profits.
+
+Demo 
+
+For the demo, open the Jupyter Notebook attached in the folder.
+
+Advantages -
+1. Give profits both in bull or bear or sideways
+2. Applicable to all ETFs, stocks, commodities, etc
+3. Risk tolerance is minimized.

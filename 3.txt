@@ -1,0 +1,12 @@
+At 02:19, R-squared evaluates the difference between the predicted and observed values.
+
+Correct - R-squared doesn't measure the difference between those values directly. It just tells how much of the dependent variable variance is explained by the independent variables. For evaluating the difference between those values, better to use Mean Squared Error(MSE) and Root Mean Squared Error(RMSE).
+
+At 04:07, R-squared = 0% indicates the model cannot predict y values.
+
+Partially correct, It should also add what does 0% means. 0% means that the model doesn't explain any variance in the relationship between independent and dependent variables. 
+
+Feedback - 
+1. Better to add the R2 squared formula in the video
+2. Add a little bit of details about residual plots
+3. Add details about overfitting and underfitting in 0% and 100% R-squared.
